@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="icon" type="image/x-icon" href="/images/img00.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-info {
+            width: 45%;
+            text-align: left;
+        }
+
+        .product-info img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .order-form {
+            width: 45%;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #27ae60;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background: #219150;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-info, .order-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side: Product Details -->
+        <div class="product-info">
+            <img id="product-image" src="" alt="Product Image">
+            <p class="product-details" id="product-name"></p>
+            <p class="product-details" id="product-price"></p>
+        </div>
+        <div class="order-form">
+            <h2>Order Details</h2>
+            <form id="order-form">
+                <input type="hidden" name="product" id="hidden-product">
+                <input type="hidden" name="price" id="hidden-price">
+                <input type="hidden" name="image" id="hidden-image">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="address" placeholder="Shipping Address" required>
+                <button type="submit">Confirm Order</button>
+            </form>
+
+            <p id="confirmation-message" style="display: none; color: green;">Order Confirmed! Redirecting...</p>
+        </div>
+    </div>
+
+    <script>
+        // Get product details from URL
+        const params = new URLSearchParams(window.location.search);
+        const productName = params.get("product");
+        const productPrice = params.get("price");
+        const productImage = params.get("image");
+
+        // Display product details on page
+        if (productName && productPrice && productImage) {
+            document.getElementById("product-name").textContent = "Product: " + productName;
+            document.getElementById("product-price").textContent = "Price: $" + productPrice;
+            document.getElementById("product-image").src = decodeURIComponent(productImage);
+
+            // Store details in hidden fields
+            document.getElementById("hidden-product").value = productName;
+            document.getElementById("hidden-price").value = productPrice;
+            document.getElementById("hidden-image").value = productImage;
+        }
+
+        // Handle form submission
+        document.getElementById("order-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Show confirmation message
+            document.getElementById("confirmation-message").style.display = "block";
+
+            // Redirect to Thank You page with product details
+            setTimeout(function() {
+                window.location.href = "thankyou.html?product=" + encodeURIComponent(productName) + "&price=" + encodeURIComponent(productPrice) + "&image=" + encodeURIComponent(productImage);
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

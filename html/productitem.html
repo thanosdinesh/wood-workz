@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood Workz</title>
+    <link rel="icon" type="image/x-icon" href="/images/img00.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .details {
+            font-size: 14px;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Products</h1>
+
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="/images/img14.webp" alt="Product 1">
+            <h2>Cosmetic Wood</h2>
+            <p class="price">Rs.9999.99</p>
+            <p class="details">High-quality sound, noise cancellation, and 12-hour battery life.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="/images/img4.jpeg" alt="Product 2">
+            <h2>Traditional Pooja Room</h2>
+            <p class="price">Rs.3129.99</p>
+            <p class="details">Track your fitness and receive notifications on your wrist.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="/images/img6.jpeg" alt="Product 3">
+            <h2>Wood Designs</h2>
+            <p class="price">Rs.9849.99</p>
+            <p class="details">Ergonomic design with adjustable DPI settings.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="/images/pro1.jpeg" alt="Product 4">
+            <h2>Multicolor Rectangular Window</h2>
+            <p class="price">Rs.7859.99</p>
+            <p class="details">Portable speaker with deep bass and 10-hour battery life.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="/images/pro2.jpeg" alt="Product 5">
+            <h2>Alanis Wooden sofa</h2>
+            <p class="price">RS.8699.99</p>
+            <p class="details">Latest model with an amazing camera and powerful processor.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="/images/pro3.jpeg" alt="Product 6">
+            <h2>Antique Self</h2>
+            <p class="price">Rs.6779.99</p>
+            <p class="details">Crystal clear sound and long battery life.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="/images/pro5.jpeg" alt="Product 7">
+            <h2>Window</h2>
+            <p class="price">Rs.9299.99</p>
+            <p class="details">10-inch display, perfect for work and entertainment.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="/images/pro6.jpeg" alt="Product 8">
+            <h2>Door</h2>
+            <p class="price">Rs.8769.99</p>
+            <p class="details">RGB backlit keys with mechanical switches.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="/images/pro7.jpeg" alt="Product 9">
+            <h2>Main Door</h2>
+            <p class="price">Rs.7349.99</p>
+            <p class="details">Ultra HD display with a 144Hz refresh rate.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="/images/pro8.jpeg" alt="Product 10">
+            <h2>Wooden Door</h2>
+            <p class="price">Rs.2449.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro9.jpeg" alt="Product 10">
+            <h2>Furniture Chair</h2>
+            <p class="price">Rs,9849.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro10.jpeg" alt="Product 10">
+            <h2>Wooden Chair</h2>
+            <p class="price">Rs.3549.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro11.jpeg" alt="Product 10">
+            <h2>Glass window </h2>
+            <p class="price">Rs.3249.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro12.jpeg" alt="Product 10">
+            <h2>Window</h2>
+            <p class="price">Rs.8749.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro13.jpeg" alt="Product 10">
+            <h2>Night Stand</h2>
+            <p class="price">Rs5999.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro14.jpeg" alt="Product 10">
+            <h2>Self caboard with draw</h2>
+            <p class="price">RS.4889.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="/images/pro15.jpeg" alt="Product 10">
+            <h2>Wood Door</h2>
+            <p class="price">Rs.4900.99</p>
+            <p class="details">Track steps, heart rate, and sleep patterns.</p>
+            <a href="/html/orderdetail.html" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
